@@ -477,7 +477,7 @@
 </ul>
 <h2 id="2-phase-2"><a href="#2-phase-2" class="headerlink" title="2. phase_2"></a>2. phase_2</h2><ul>
 <li><p>首先查看phase_2汇编代码</p>
-<p>![img](file:///C:\Users\12499\Documents\Tencent Files\1249911865\Image\C2C\B4IYDYVUSN_]2QZ[S$<a href="mailto:&#x42;&#x54;&#64;&#80;&#x30;&#x2e;&#x70;&#110;&#103;">&#x42;&#x54;&#64;&#80;&#x30;&#x2e;&#x70;&#110;&#103;</a>)</p>
+<p>![img](file:///C:\Users\12499\Documents\Tencent Files\1249911865\Image\C2C\B4IYDYVUSN_]2QZ[S$<a href="mailto:&#x42;&#84;&#x40;&#x50;&#48;&#46;&#112;&#x6e;&#x67;">&#x42;&#84;&#x40;&#x50;&#48;&#46;&#112;&#x6e;&#x67;</a>)</p>
 <p>首先看到read_six_numbers的函数，猜测输入应该是和6个数字有关，数字被保存在%esp-0x20处，在0x08048b19处设置断点，随便输入6个数，运行程序至断点，使用<code>p *(int *) ($ebp -0x20 )</code> 查看发现是输入的第一个数</p>
 <p><img src="C:\Users\12499\AppData\Roaming\Typora\typora-user-images\image-20210520191850738.png" alt="image-20210520191850738"></p>
 <p><img src="C:\Users\12499\AppData\Roaming\Typora\typora-user-images\image-20210520191910337.png" alt="image-20210520191910337"></p>
