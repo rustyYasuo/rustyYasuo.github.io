@@ -464,7 +464,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本人的第一篇划水博客,放点课堂上的东西得了…，这玩意还挺有意思，反汇编和gdb的运用吧</p>
+                <p>本人的第一篇划水博客,放点课堂上的东西得了…，这玩意还挺有意思</p>
 <h2 id="CSAPP-bomb-lab"><a href="#CSAPP-bomb-lab" class="headerlink" title="CSAPP bomb lab"></a>CSAPP bomb lab</h2><p>[TOC]</p>
 <h2 id="1-phase-1"><a href="#1-phase-1" class="headerlink" title="1. phase_1"></a>1. phase_1</h2><ul>
 <li><p>首先使用gdb中使用<code>disassemble phase_1</code>查看汇编代码</p>
@@ -499,21 +499,21 @@
 <p><img src="https://i.loli.net/2021/08/12/NzmK5uLJcSPsWT7.png"></p>
 <p>将其转化成C语言形式（这一步太麻烦了），大概可以表示为：</p>
 <pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">func4</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">)</span>
-<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token punctuation">{</span>
     <span class="token keyword">int</span> tmp <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>c <span class="token operator">-</span> b<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>c <span class="token operator">-</span> b<span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> b<span class="token punctuation">;</span>
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">&lt;=</span> a<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">==</span> a<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">&lt;=</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">==</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token function">func4</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> tmp <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token function">func4</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> tmp <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>这个时候写一个C语言程序，第一个输入遍历0到13，输出满足条件的数即可</p>
 <p><img src="https://i.loli.net/2021/08/12/9yC2Ge45HrcdNhW.png"></p>
@@ -528,8 +528,7 @@
 </ul>
 <h2 id="6-phase-6"><a href="#6-phase-6" class="headerlink" title="6. phase_6"></a>6. phase_6</h2><ul>
 <li><p>首先查看phase_6汇编代码：</p>
-</li>
-<li><p><img src="https://i.loli.net/2021/08/12/lHFoXpcvR3qETBz.png"></p>
+<p><img src="https://i.loli.net/2021/08/12/lHFoXpcvR3qETBz.png"></p>
 <p><img src="https://i.loli.net/2021/08/12/WgGR8Ao7m4C1kfa.png"></p>
 <p>一开始就是正常开辟栈空间和压栈之类的操作，注意到&lt;+21&gt;对red_six_numbers函数的调用，可知和phase_2一样，输入应该是6个数，继续阅读汇编代码，发现应该是多重循环：</p>
 <p>第一重循环应该是依次读取6个输入的数，用数组存储，根据&lt;+35&gt; 处的：</p>
