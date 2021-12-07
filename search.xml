@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>人工智能安全----对抗样本学习</title>
+      <link href="/2021/12/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%89%E5%85%A8%E7%AF%87--%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+      <url>/2021/12/07/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%89%E5%85%A8%E7%AF%87--%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>第一次跟着老师学一点东西，写个博客压压惊~来看看自己是不是这块料</p><h2 id="面向人脸识别系统-模型的物理对抗样本攻击"><a href="#面向人脸识别系统-模型的物理对抗样本攻击" class="headerlink" title="面向人脸识别系统/模型的物理对抗样本攻击"></a>面向人脸识别系统/模型的物理对抗样本攻击</h2><p>[TOC]</p><h2 id="入门参考"><a href="#入门参考" class="headerlink" title="入门参考"></a>入门参考</h2><p>第一次接触这种东西，也不知道从哪开始，老师给了个方向和两篇综述，自己找了一点文献资料将就着看咯</p><p>开头有点水哈，一步一步来吧</p><p>这篇博客就放点我的参考文献吧</p><p>首先是综述：</p><p>Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey</p><p>Adversarial Examples: Attacks and Defenses for Deep Learning</p><p>然后就是几篇论文：</p><p>ADVHAT: REAL-WORLD ADVERSARIAL ATTACK ON ARCFACE FACE ID SYSTEM</p><p><a href="https://arxiv.org/pdf/1908.08705.pdf">1908.08705.pdf (arxiv.org)</a></p><p>BinarizedAttack: Structural Poisoning Attacks to Graph-based Anomaly Detection</p><p><a href="https://arxiv.org/pdf/2106.09989.pdf">https://arxiv.org/pdf/2106.09989.pdf</a></p><p>PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving</p><p><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Kong_PhysGAN_Generating_Physical-World-Resilient_Adversarial_Examples_for_Autonomous_Driving_CVPR_2020_paper.pdf">https://openaccess.thecvf.com/content_CVPR_2020/papers/Kong_PhysGAN_Generating_Physical-World-Resilient_Adversarial_Examples_for_Autonomous_Driving_CVPR_2020_paper.pdf</a></p><p>Efficient Decision-based Black-box Adversarial Attacks on Face Recognition</p><p><a href="https://arxiv.org/abs/1904.04433v1">https://arxiv.org/abs/1904.04433v1</a></p><p>目前就这些</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一篇划水(CSAPP bomb lab)</title>
       <link href="/2021/07/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%88%92%E6%B0%B4%E5%8D%9A%E5%AE%A2/"/>
       <url>/2021/07/20/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%88%92%E6%B0%B4%E5%8D%9A%E5%AE%A2/</url>
